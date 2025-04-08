@@ -1,36 +1,182 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fatra Syamsuddin - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Fatra Syamsuddin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">FS</div>
-        <nav>
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section class="hero">
-        <div class="content">
-            <span class="greeting">HELLO EVERYONE</span>
-            <h1>I am Fatra Syamsuddin</h1>
-            <h3>(Junior Web Developer)</h3>
-            <p>Selamat berkunjung di website saya. Website ini saya gunakan untuk berbagi cerita pengalaman dan menampilkan keindahan alam dari beberapa destinasi wisata yang saya kunjungi.</p>
-            <a href="#" class="btn">See More</a>
+
+  <!-- ===== NAVIGATION ===== -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="img/logo.jpg" alt="Logo Fatra" />
+    </div>
+    <div class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portofolio</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <div class="hero" id="home">
+    <div class="hero-text">
+      <div class="greeting">HELLO EVERYONE</div>
+      <h1>I am Fatra Syamsuddin</h1>
+      <h2>(Junior web developer)</h2>
+      <p>
+        Selamat berkunjung di website saya. Website ini saya gunakan untuk berbagi cerita pengalaman dan menampilkan keindahan alam dari beberapa destinasi wisata yang saya kunjungi.
+      </p>
+      <a href="#about" class="see-more-btn">See More</a>
+    </div>
+    <div class="hero-image">
+      <img src="img/profile-home.jpg" alt="Foto Fatra">
+    </div>
+  </div>
+
+  <!-- ===== ABOUT + EDUCATION SECTION ===== -->
+  <section id="about" class="section">
+    <h3 class="section-title">Tentang Saya</h3>
+    <p style="max-width: 600px; margin: 0 auto; text-align: center;">
+      Saya adalah seorang junior web developer yang sedang menempuh pendidikan di Universitas Negeri Makassar. Di sini saya berbagi pengalaman, proyek-proyek yang telah saya kerjakan, dan cerita-cerita seru seputar dunia teknologi dan alam.
+    </p>
+
+    <h3 class="section-title" style="margin-top: 40px;">Pendidikan</h3>
+    <div class="edu-boxes">
+      <div class="edu-card">
+        <h4>SD NEGERI 116 ENREKANG</h4>
+        <p>2011 - 2017</p>
+      </div>
+      <div class="edu-card">
+        <h4>SMP NEGERI 1 ENREKANG</h4>
+        <p>2017 - 2020</p>
+      </div>
+      <div class="edu-card">
+        <h4>SMA NEGERI 2 ENREKANG</h4>
+        <p>2020 - 2023</p>
+      </div>
+      <div class="edu-card">
+        <h4>UNIVERSITAS NEGERI MAKASSAR</h4>
+        <p>2023 - Sekarang</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO SECTION ===== -->
+  <section id="portfolio" style="background: linear-gradient(to bottom, #190733, #3a0ca3); padding: 40px 20px; color: white; font-family: 'Poppins', sans-serif;">
+    <h2 style="text-align: center; background-color: #bcaaff; color: #2d0a53; padding: 10px 20px; border-radius: 15px; width: fit-content; margin: 0 auto 30px auto; font-size: 28px;">Project</h2>
+
+    <!-- Project Kelompok -->
+    <div style="margin-bottom: 60px;">
+      <h3 style="background-color: #6c3fc3; padding: 10px 20px; display: inline-block; border-radius: 15px; font-size: 22px;">Project Kelompok Produk Digital Marketing</h3>
+      <div style="display: flex; gap: 30px; margin-top: 20px; flex-wrap: wrap; justify-content: center;">
+        <div style="text-align: center;">
+          <img src="img/lavuvu-product.jpg" alt="Product" style="width: 300px; border-radius: 25px; border: 5px solid white;">
+          <div style="margin-top: 10px; background-color: #6c3fc3; border-radius: 10px; padding: 5px 15px; display: inline-block; font-size: 18px;">Product</div>
         </div>
-        <div class="image-container">
-            <img src="img/profile-image.png" alt="Fatra Syamsuddin" width ="300">
+        <div style="text-align: center;">
+          <img src="img/teamwork.jpg" alt="My Teamwork" style="width: 300px; border-radius: 25px;">
+          <div style="margin-top: 10px; background-color: #6c3fc3; border-radius: 10px; padding: 5px 15px; display: inline-block; font-size: 18px;">My Teamwork</div>
         </div>
-    </section>
-</body>
-</html>
+      </div>
+    </div>
+
+    <!-- Project Individu -->
+    <div>
+      <h3 style="background-color: #6c3fc3; padding: 10px 20px; display: inline-block; border-radius: 15px; font-size: 22px;">Project Individu</h3>
+      <div style="display: flex; gap: 30px; margin-top: 20px; flex-wrap: wrap; justify-content: center;">
+        <div style="text-align: center;">
+          <img src="img/quotes-design.jpg" alt="Design Quotes" style="width: 250px; border-radius: 15px;">
+          <div style="margin-top: 10px; background-color: #6c3fc3; border-radius: 10px; padding: 5px 10px; display: inline-block; font-size: 16px;">Project Design Quotes</div>
+        </div>
+        <div style="text-align: center;">
+          <img src="img/iklan-umkm.jpg" alt="Iklan Kewirausahaan" style="width: 250px; border-radius: 15px;">
+          <div style="margin-top: 10px; background-color: #6c3fc3; border-radius: 10px; padding: 5px 10px; display: inline-block; font-size: 16px;">Produk Iklan Kewirausahaan</div>
+        </div>
+        <div style="text-align: center;">
+          <img src="img/poster-kampanye.jpg" alt="Poster Kampanye" style="width: 250px; border-radius: 15px;">
+          <div style="margin-top: 10px; background-color: #6c3fc3; border-radius: 10px; padding: 5px 10px; display: inline-block; font-size: 16px;">Project Poster Kampanye</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLOG SECTION ===== -->
+  <section id="blog" class="section">
+    <div class="container">
+      <div class="blog-category">Blog Category</div>
+
+      <div class="section-wrapper">
+        <div class="section-title">Destination</div>
+        <div class="blog-section">
+          <div class="blog-card">
+            <img src="/img/destination1.jpg" alt="Destinasi 1">
+            <div class="blog-title">Indahnya Hamparan Padang & Bukit Hijau di Tebing Romantis</div>
+            <div class="blog-location">📍Lembang Bau, Kec. Bonggakaradeng, Kab. Tana Toraja</div>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+          <div class="blog-card">
+            <img src="/img/destination2.jpg" alt="Destinasi 2">
+            <div class="blog-title">Arum Jeram di Kaki Pegunungan Desa Wisata Latimojong Kab Enrekang</div>
+            <div class="blog-location">📍Desa Latimojong, Kec. Buntu Batu, Kab. Enrekang</div>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+          <div class="blog-card">
+            <img src="/img/destination3.jpg" alt="Destinasi 3">
+            <div class="blog-title">Pesona dan Keunikan Wisata Gunung Nona di Kab Enrekang</div>
+            <div class="blog-location">📍Desa Rantelemo, Kec. Enrekang, Kab. Enrekang</div>
+            <a href="#" class="read-more">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title">Education</div>
+      <div class="blog-section">
+        <div class="blog-card">
+          <img src="/img/edu1.jpg" alt="Edu 1">
+          <div class="blog-title">Objectives and Market Structure</div>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="blog-card">
+          <img src="/img/edu2.jpg" alt="Edu 2">
+          <div class="blog-title">Ekonomis and Diseconomis</div>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="blog-card">
+          <img src="/img/edu3.jpg" alt="Edu 3">
+          <div class="blog-title">Competitive Markets and Monopoly</div>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+      <h2>Contact Me</h2>
+      <p class="subtitle">if you have important needs <br>related to cooperation.</p>
+  
+      <div class="contact-info">
+        <div class="contact-item">
+          <img src="img/email-icon.jpg" alt="Email Icon" class="icon" />
+          <span>fatrasyamsuddin40@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <img src="img/whatsapp-icon.jpg" alt="WhatsApp Icon" class="icon" />
+          <span>082-238-668-321</span>
+        </div>
+        <div class="contact-item">
+          <img src="img/loc-icon.jpg" alt="Location Icon" class="icon" />
+          <span>Jl. Traktor 4, Kel. Mangasa, Kec. Tamalate,<br>Kota Makassar, Sulawesi Selatan</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
