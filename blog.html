@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatra Syamsuddin Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #1a0933;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header and Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .logo img {
+            width: 200%;
+            height: 200%;
+            object-fit: cover;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        nav ul li a.active {
+            border-bottom: 2px solid white;
+            padding-bottom: 5px;
+        }
+
+        /* Blog Category */
+        .blog-category {
+            text-align: center;
+            background-color: rgba(149, 132, 249, 0.3);
+            padding: 15px;
+            border-radius: 20px;
+            margin: 30px 0;
+        }
+
+        .blog-category h2 {
+            font-size: 24px;
+        }
+
+        /* Blog Section */
+        .blog-section {
+            margin: 20px 0;
+        }
+
+        .category-title {
+            background-color: rgba(106, 90, 205, 0.5);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .blog-cards {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            background-color: rgba(173, 183, 201, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .blog-card {
+            flex: 1;
+            background: linear-gradient(to right, rgba(138, 94, 220, 0.7), rgba(90, 185, 160, 0.7));
+            border-radius: 15px;
+            overflow: hidden;
+            padding: 15px;
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .blog-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .blog-location {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 12px;
+            margin-bottom: 10px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .blog-location i {
+            font-size: 14px;
+        }
+
+        .read-more {
+            background: linear-gradient(to right, #8e44ad, #3498db);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Education Section */
+        .education-card .blog-image {
+            height: 200px;
+            background-color: #3949ab;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            padding: 20px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .footer-nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .copyright {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <img src="img/logo.jpg" alt="FS Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portofolio.html">Portofolio</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Blog Category -->
+        <div class="blog-category">
+            <h2>Blog Category</h2>
+        </div>
+
+        <!-- Destination Section -->
+        <div class="blog-section">
+            <div class="category-title">Destination</div>
+            <div class="blog-cards">
+                <!-- Destination Card 1 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="img/destination1.jpg" alt="Padang dan Bukit Hijau">
+                    </div>
+                    <h3 class="blog-title">Indahnya Hamparan Padang & Bukit Hijau di Tebing Romantis</h3>
+                    <div class="blog-location">
+                        <span>📍</span>
+                        <span>Lembang Bau, Kec. Bungakrindang, Kab. Enrekang</span>
+                    </div>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+
+                <!-- Destination Card 2 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="img/destination2.jpg" alt="Arum Jeram">
+                    </div>
+                    <h3 class="blog-title">Arum Jeram di Kaki Pegunungan Desa Wisata Latimojong Kab Enrekang</h3>
+                    <div class="blog-location">
+                        <span>📍</span>
+                        <span>Desa Latimojong, Kec. Buntu Batu, Kab. Enrekang</span>
+                    </div>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+
+                <!-- Destination Card 3 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="img/destination3.jpg" alt="Gunung Nona">
+                    </div>
+                    <h3 class="blog-title">Pesona dan Keunikan Wisata Gunung Nona di Kab Enrekang</h3>
+                    <div class="blog-location">
+                        <span>📍</span>
+                        <span>Desa Rossoan, Kec. Enrekang, Kab. Enrekang</span>
+                    </div>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="blog-section">
+            <div class="category-title">Education</div>
+            <div class="blog-cards">
+                <!-- Education Card 1 -->
+                <div class="blog-card education-card">
+                    <div class="blog-image">
+                        <img src="img/edu1.jpg" alt="Education 1">
+                    </div>
+                    <h3 class="blog-title">Objectives and Market Structure</h3>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+
+                <!-- Education Card 2 -->
+                <div class="blog-card education-card">
+                    <div class="blog-image">
+                        <img src="img/edu2.jpg" alt="Education 2">
+                    </div>
+                    <h3 class="blog-title">Ekonomis and Diseconomis</h3>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+
+                <!-- Education Card 3 -->
+                <div class="blog-card education-card">
+                    <div class="blog-image">
+                        <img src="img/edu3.jpg" alt="Education 3">
+                    </div>
+                    <h3 class="blog-title">Competitive Markets and Monopoly</h3>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Portofolio</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="copyright">© Fatra Syamsuddin 2025, All rights reserved</div>
+    </footer>
+</body>
+</html>
