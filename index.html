@@ -4,30 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fatra Syamsuddin Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      background-color: #0e032d;
+      background-color: #1a0933;
       color: white;
     }
 
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header and Navigation */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 30px 50px;
+      padding: 20px 0;
     }
 
-    header img.logo {
-      width: 80px;
-      height: 80px;
+    .logo {
+      width: 60px;
+      height: 60px;
       background-color: white;
       border-radius: 50%;
       display: flex;
@@ -37,36 +44,34 @@
     }
     
     .logo img {
-       width: 300%;
-       height: 300%;
-       object-fit: cover;
+      width: 200%;
+      height: 200%;
+      object-fit: cover;
     }
 
-    nav a {
-      margin: 0 20px;
-      text-decoration: none;
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav ul li a {
       color: white;
-      font-weight: 400;
+      text-decoration: none;
       font-size: 18px;
+      font-weight: 500;
       position: relative;
     }
 
-    nav a.active::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 3px;
-      background: white;
-      bottom: -5px;
-      left: 0;
-      border-radius: 2px;
+    nav ul li a.active {
+      border-bottom: 2px solid white;
+      padding-bottom: 5px;
     }
 
     .hero {
       background: linear-gradient(135deg, #27005D, #9400FF);
       border-radius: 25px;
       margin: 50px auto;
-      max-width: 90%;
       padding: 50px;
       display: flex;
       justify-content: space-between;
@@ -126,6 +131,31 @@
       object-fit: contain;
     }
 
+    /* Footer */
+    footer {
+      margin-top: 50px;
+      padding: 20px 0;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+
+    .footer-nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .copyright {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
     @media (max-width: 768px) {
       .hero {
         flex-direction: column;
@@ -138,30 +168,38 @@
   </style>
 </head>
 <body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <img src="img/logo.jpg" alt="FS Logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portofolio.html">Portofolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <header>
-    <img src="img/logo.jpg" alt="Logo" class="logo">
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="portofolio.html">Portofolio</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <section class="hero">
+      <div class="hero-text">
+        <div class="tagline">HELLO EVERYONE</div>
+        <h1>I am Fatra Syamsuddin</h1>
+        <h2>(Junior web developer)</h2>
+        <p>Selamat berkunjung di website saya. Website ini saya gunakan untuk berbagi cerita pengalaman dan menampilkan keindahan alam dari beberapa destinasi wisata yang saya kunjungi.</p>
+        <a href="about.html" class="btn">See More</a>
+      </div>
+      <div class="hero-image">
+        <img src="img/profile-home.jpg" alt="Fatra Syamsuddin">
+      </div>
+    </section>
+  </div>
 
-  <section class="hero">
-    <div class="hero-text">
-      <div class="tagline">HELLO EVERYONE</div>
-      <h1>I am Fatra Syamsuddin</h1>
-      <h2>(Junior web developer)</h2>
-      <p>Selamat berkunjung di website saya. Website ini saya gunakan untuk berbagi cerita pengalaman dan menampilkan keindahan alam dari beberapa destinasi wisata yang saya kunjungi.</p>
-      <a href="#" class="btn">See More</a>
-    </div>
-    <div class="hero-image">
-      <img src="img/profile-home.jpg" alt="Fatra Syamsuddin">
-    </div>
-  </section>
-
+  <!-- Tambahkan referensi ke file JavaScript transisi halaman -->
+  <script src="page-transitions.js"></script>
 </body>
 </html>

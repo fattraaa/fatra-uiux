@@ -10,37 +10,63 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #1A0536, #3D1C85);
       color: white;
       overflow-x: hidden;
     }
 
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header and Navigation - updated to match blog */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 30px 60px;
+      padding: 20px 0;
     }
 
+    .logo {
+      width: 60px;
+      height: 60px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    
     .logo img {
-      width: 50px;
+      width: 200%;
+      height: 200%;
+      object-fit: cover;
     }
 
-    nav a {
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav ul li a {
       color: white;
       text-decoration: none;
-      margin-left: 30px;
       font-size: 18px;
       font-weight: 500;
+      position: relative;
     }
 
-    nav a.active {
-      text-decoration: underline;
-      font-weight: 700;
+    nav ul li a.active {
+      border-bottom: 2px solid white;
+      padding-bottom: 5px;
     }
 
     .section-title {
@@ -74,29 +100,90 @@
       border-radius: 35px;
     }
 
-    .edu-section {
-      padding: 0 60px 40px;
+    /* Pendidikan - dipertahankan sesuai desain gambar */
+    .education-section {
+      background-color: #1A0536;
+      padding: 40px 0;
+      position: relative;
     }
 
-    .edu-item {
+    .education-title {
+      background-color: #C6AFFF;
+      color: #1A0536;
+      font-size: 22px;
+      font-weight: 700;
+      padding: 10px 30px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-left: 60px;
+      margin-bottom: 40px;
+    }
+
+    .education-timeline {
+      position: relative;
+      padding: 0 60px;
+    }
+
+    .timeline-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      background: linear-gradient(to bottom, #AD6BFF, #00DB86);
+    }
+
+    .education-item {
       display: flex;
       align-items: center;
-      margin: 20px 0;
+      margin-bottom: 80px;
+      position: relative;
     }
 
-    .edu-item img {
-      width: 45px;
-      margin-right: 20px;
+    .education-item:nth-child(odd) {
+      justify-content: flex-start;
+    }
+
+    .education-item:nth-child(even) {
+      justify-content: flex-end;
+    }
+
+    .edu-logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    .edu-logo img {
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
     }
 
     .edu-info {
       background: linear-gradient(to right, #AD6BFF, #00DB86);
-      padding: 15px 25px;
-      border-radius: 12px;
+      padding: 20px 30px;
+      border-radius: 15px;
+      min-width: 300px;
+      margin: 0 20px;
+      z-index: 1;
+    }
+
+    .edu-info p:first-child {
+      font-size: 20px;
       font-weight: 700;
-      color: white;
-      font-size: 16px;
-      line-height: 1.4;
+      margin-bottom: 5px;
+    }
+
+    .edu-info p:last-child {
+      font-size: 18px;
+      font-weight: 600;
     }
 
     .travel-section {
@@ -129,91 +216,134 @@
       text-align: center;
       color: white;
       font-size: 14px;
+      margin-top: 50px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    footer nav {
-      margin-bottom: 10px;
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 20px;
     }
 
-    footer nav a {
+    .footer-nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
-      font-weight: 500;
+    }
+
+    .copyright {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <!-- Header - Updated to match blog style -->
+    <header>
+      <div class="logo">
+        <img src="img/logo.jpg" alt="FS Logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="portofolio.html">Portofolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <!-- Header -->
-  <header>
-    <div class="logo">
-      <img src="img/logo.jpg" alt="Logo">
+    <!-- Mengenai Saya -->
+    <div class="section-title">Mengenai Saya</div>
+    <div class="about-content">
+      <div class="about-text">
+        <p>Saya bernama Fatra Syamsuddin, biasa dipanggil "Fatra". Lahir di Enrekang pada tanggal 12 Februari 2005. Sekarang saya sedang menempuh pendidikan tinggi di Universitas Negeri Makassar atau lebih dikenal dengan sebutan "UNM" dan memilih program studi Bisnis Digital.</p>
+        <br />
+        <p>Alasan saya memilih prodi ini dikarenakan saya ingin mendapatkan skill dan wawasan seputar dunia bisnis yang digabungkan dengan ilmu IT.</p>
+      </div>
+      <div class="about-image">
+        <img src="img/formal-foto.jpg" alt="Foto Fatra">
+      </div>
     </div>
-    <nav>
+  </div>
+
+  <!-- Pendidikan - Dipertahankan sesuai desain pada gambar -->
+  <div class="education-section">
+    <div class="education-title">Pendidikan</div>
+    <div class="education-timeline">
+      <div class="timeline-line"></div>
+      
+      <!-- SD -->
+      <div class="education-item">
+        <div class="edu-logo">
+          <img src="img/sd.jpg" alt="Logo SD">
+        </div>
+        <div class="edu-info">
+          <p>2011–2017</p>
+          <p>SD NEGERI 116 ENREKANG</p>
+        </div>
+      </div>
+      
+      <!-- SMP -->
+      <div class="education-item">
+        <div class="edu-info">
+          <p>2017–2020</p>
+          <p>SMP NEGERI 1 ENREKANG</p>
+        </div>
+        <div class="edu-logo">
+          <img src="img/smp.jpg" alt="Logo SMP">
+        </div>
+      </div>
+      
+      <!-- SMA -->
+      <div class="education-item">
+        <div class="edu-logo">
+          <img src="img/sma.jpg" alt="Logo SMA">
+        </div>
+        <div class="edu-info">
+          <p>2020–2023</p>
+          <p>SMA NEGERI 2 ENREKANG</p>
+        </div>
+      </div>
+      
+      <!-- Universitas -->
+      <div class="education-item">
+        <div class="edu-info">
+          <p>2023–SEKARANG</p>
+          <p>UNIVERSITAS NEGERI MAKASSAR</p>
+        </div>
+        <div class="edu-logo">
+          <img src="img/unm.jpg" alt="Logo UNM">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Travelling -->
+    <div class="travel-section">
+      <p>Selain itu, saya juga sangat gemar mengabadikan moment atau sesuatu ketika berpergian ke suatu tempat atau wisata yang memiliki keindahan alam yang sangat mempesona, sehingga saya ingin bercita cita menjadi seorang traveller juga nantinya.</p>
+      <div class="travel-images">
+        <img src="img/gunung-nona.jpg" alt="Gunung">
+        <img src="img/bambapuang.jpg" alt="Perbukitan">
+        <img src="img/penja.jpg" alt="Lembah">
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer - Updated to match blog style -->
+  <footer>
+    <div class="footer-nav">
       <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
+      <a href="about.html">About</a>
       <a href="portofolio.html">Portofolio</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <!-- Mengenai Saya -->
-  <div class="section-title">Mengenai Saya</div>
-  <div class="about-content">
-    <div class="about-text">
-      <p>Saya bernama Fatra Syamsuddin, biasa dipanggil "Fatra". Lahir di Enrekang pada tanggal 12 Februari 2005. Sekarang saya sedang menempuh pendidikan tinggi di Universitas Negeri Makassar atau lebih dikenal dengan sebutan "UNM" dan memilih program studi Bisnis Digital.</p>
-      <br />
-      <p>Alasan saya memilih prodi ini dikarenakan saya ingin mendapatkan skill dan wawasan seputar dunia bisnis yang digabungkan dengan ilmu IT.</p>
     </div>
-    <div class="about-image">
-      <img src="img/formal-foto.jpg" alt="Foto Fatra">
-    </div>
-  </div>
-
-  <!-- Pendidikan -->
-  <div class="section-title">Pendidikan</div>
-  <div class="edu-section">
-    <div class="edu-item">
-      <img src="img/sd.jpg" alt="Logo SD">
-      <div class="edu-info">2011–2017<br>SD NEGERI 116 ENREKANG</div>
-    </div>
-    <div class="edu-item">
-      <img src="img/smp.jpg" alt="Logo SMP">
-      <div class="edu-info">2017–2020<br>SMP NEGERI 1 ENREKANG</div>
-    </div>
-    <div class="edu-item">
-      <img src="img/sma.jpg" alt="Logo SMA">
-      <div class="edu-info">2020–2023<br>SMA NEGERI 2 ENREKANG</div>
-    </div>
-    <div class="edu-item">
-      <img src="img/unm.jpg" alt="Logo UNM">
-      <div class="edu-info">2023–SEKARANG<br>UNIVERSITAS NEGERI MAKASSAR</div>
-    </div>
-  </div>
-
-  <!-- Travelling -->
-  <div class="travel-section">
-    <p>Selain itu, saya juga sangat gemar mengabadikan moment atau sesuatu ketika berpergian ke suatu tempat atau wisata yang memiliki keindahan alam yang sangat mempesona, sehingga saya ingin bercita cita menjadi seorang traveller juga nantinya.</p>
-    <div class="travel-images">
-      <img src="img/gunung-nona.jpg" alt="Gunung">
-      <img src="img/bambapuang.jpg" alt="Perbukitan">
-      <img src="img/penja.jpg" alt="Lembah">
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Portofolio</a>
-      <a href="#">Blog</a>
-      <a href="#">Contact</a>
-    </nav>
-    <p>© Fatra Syamsuddin 2025, All rights deserved</p>
+    <div class="copyright">© Fatra Syamsuddin 2025, All rights reserved</div>
   </footer>
-
 </body>
 </html>
