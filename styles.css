@@ -81,8 +81,10 @@
   }
   
   .footer-nav a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
+    background-color: #291283;
+    border-radius: 15px; 
   }
   
   .copyright {
